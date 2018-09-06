@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36119AA021417E5900F3F78A /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36119A9F21417E5900F3F78A /* template.swift */; };
+		36119AA221417E9500F3F78A /* template 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36119AA121417E9500F3F78A /* template 2.swift */; };
 		36B17F9D213848F50023E564 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B17F9C213848F50023E564 /* main.swift */; };
 		36B17FA421384A570023E564 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B17FA321384A570023E564 /* menu.swift */; };
 		36B17FA621386FDC0023E564 /* add games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B17FA521386FDC0023E564 /* add games.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		36119A9F21417E5900F3F78A /* template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = template.swift; sourceTree = "<group>"; };
+		36119AA121417E9500F3F78A /* template 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "template 2.swift"; sourceTree = "<group>"; };
 		36B17F99213848F50023E564 /* video game library */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "video game library"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B17F9C213848F50023E564 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		36B17FA321384A570023E564 /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				36B17FA321384A570023E564 /* menu.swift */,
 				36B17FA521386FDC0023E564 /* add games.swift */,
 				36C14E78213EC05800EF03F1 /* librbary.swift */,
+				36119A9F21417E5900F3F78A /* template.swift */,
+				36119AA121417E9500F3F78A /* template 2.swift */,
 			);
 			path = "video game library";
 			sourceTree = "<group>";
@@ -128,8 +134,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36119AA021417E5900F3F78A /* template.swift in Sources */,
 				36C14E79213EC05800EF03F1 /* librbary.swift in Sources */,
 				36B17FA421384A570023E564 /* menu.swift in Sources */,
+				36119AA221417E9500F3F78A /* template 2.swift in Sources */,
 				36B17F9D213848F50023E564 /* main.swift in Sources */,
 				36B17FA621386FDC0023E564 /* add games.swift in Sources */,
 			);

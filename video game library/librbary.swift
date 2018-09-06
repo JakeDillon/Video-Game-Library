@@ -13,17 +13,17 @@ class Library {
     
     //an empty array of game objects
     private var gameArray: [Game] = [Game(title: "Fire Pro Wrestling: World"), Game(title: "Far Cry 5"), Game(title: "WWF: No Mercy"), Game(title: "Saints Row"), Game(title: "Saw: the game")]
-
+    
     // Mark:- Functions
     
     func addGames() {
-       
+        
         print("Please enter the title of the game: ")
         
         var newGameTitle = readLine()!
         
         while newGameTitle == nil || newGameTitle == "" {
-        print("invalid title please try again")
+            print("invalid title please try again")
             newGameTitle = readLine()!
         }
         
@@ -68,7 +68,10 @@ class Library {
     func checkGameOut() {
         
         for index in 0..<gameArray.count {
+            
+            if gameArray[index].checkedIn == true {
             print("\(index). \(gameArray[index].title)")
+            }
         }
         print("please enter the index of the game you wish to check out:")
         
@@ -78,31 +81,55 @@ class Library {
             print("invalid input, please enter a usable index")
             userInput = Int(readLine()!)
         }
-       gameArray[userInput!].checkedIn = false
-        
-        let currentCalendar = Calendar.current
-        let dueDate = currentCalendar.date(byAdding: .day, value: 14, to: Date())
-        gameArray[userInput!].dueDate = dueDate
-        
+        if gameArray[userInput!].checkedIn == false {
+            print("game is already checked out")
+        } else {
+            
+            gameArray[userInput!].checkedIn = false
+            
+            let currentCalendar = Calendar.current
+            let dueDate = currentCalendar.date(byAdding: .day, value: 14, to: Date())
+            gameArray[userInput!].dueDate = dueDate
+            for game in gameArray {
+                if game.checkedIn == false {
+                    print(game.title)
+                    print("Your game is due on")
+                    if let dueDate = game.dueDate {
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "MM-dd-yyyy"
+                        print(dateFormatter.string(from: dueDate))
+                    }
+                }
+            }
+        }
     }
-
+    
+    
     func checkGameIn() {
         for index in 0..<gameArray.count {
-             print("\(index). \(gameArray[index].title)")
+            if gameArray[index].checkedIn == false {
+                
+                
+                print("\(index). \(gameArray[index].title)")
             }
-            print("please enter the index of the game you wish to check in:")
-
-            var userInput = Int(readLine()!)
-            
-            while userInput == nil {
-                print("invalid input, please enter a usable index")
-                userInput = Int(readLine()!)
-            }
-            gameArray[userInput!].checkedIn = true
-            gameArray[userInput!].dueDate = nil 
         }
-    
+        print("please enter the index of the game you wish to check in:")
+        var userInput = Int(readLine()!)
+        
+        while userInput == nil {
+            print("invalid input, please enter a usable index")
+            userInput = Int(readLine()!)
+        }
+        if gameArray[userInput!].checkedIn == true {
+            print("game is already checked in")
+        } else {
+            gameArray[userInput!].checkedIn = true
+            gameArray[userInput!].dueDate = nil
+            print("Your game has been checked in")
+        }
     }
+    
+}
 
 
 

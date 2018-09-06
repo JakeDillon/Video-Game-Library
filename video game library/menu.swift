@@ -37,7 +37,6 @@ class Menu{
     6. List Checked Out Games
     7. Help
     8. Quit
-    9. Surprise
     """)
     }
     func handleInput(_ input: String) {
@@ -65,7 +64,8 @@ class Menu{
         case "8":
             quit()
         case "9":
-            print("Congrats you have one free coupon for one game")
+            print("Congrats you have a free coupon for one back from Big Mike")
+            help()
         default:
             break
         }
