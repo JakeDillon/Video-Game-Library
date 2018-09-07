@@ -56,6 +56,7 @@ class Library {
         let game = Game(title: newGameTitle)
         gameArray.append(Game(title: newGameTitle))
     }
+    
     func removeGame() {
         print("please enter password")
         var input: String? = nil
