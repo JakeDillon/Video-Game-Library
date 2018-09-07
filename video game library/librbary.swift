@@ -17,7 +17,33 @@ class Library {
     // Mark:- Functions
     
     func addGames() {
+        print("please enter password")
+        var input: String? = nil
         
+        repeat {
+            let line = readLine()!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            if line != "" {
+                input = line
+            } else {
+                print("Invalid Input")
+            }
+        } while input == nil
+        
+        if input == "dirty caveman" {
+            for index in 0..<gameArray.count {
+                print("\(index). \(gameArray[index].title)")
+            }
+            var userInput = Int(readLine()!)
+            
+            while userInput == nil {
+                print("invalid input, please use a usable index")
+                userInput = Int(readLine()!)
+            }
+            gameArray.remove(at: userInput!)
+        } else {
+            print("wrong password YOU SUCK!!!!!")
+        }
         print("Please enter the title of the game: ")
         
         var newGameTitle = readLine()!
@@ -31,6 +57,20 @@ class Library {
         gameArray.append(Game(title: newGameTitle))
     }
     func removeGame() {
+        print("please enter password")
+        var input: String? = nil
+        
+        repeat {
+            let line = readLine()!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            if line != "" {
+                input = line
+            } else {
+                print("Invalid Input")
+            }
+        } while input == nil
+        
+        if input == "dirty caveman" {
         for index in 0..<gameArray.count {
             print("\(index). \(gameArray[index].title)")
         }
@@ -41,6 +81,9 @@ class Library {
             userInput = Int(readLine()!)
         }
         gameArray.remove(at: userInput!)
+        } else {
+            print("wrong password YOU SUCK!!!!!")
+        }
     }
     func listAvailableGames() {
         

@@ -8,7 +8,8 @@
 
 import Foundation
 class Menu{
-    
+
+   
     var shouldQuit = false
     
     let library = Library() //Create a new instance for the new library class
@@ -95,6 +96,7 @@ class Menu{
         return input!
     }
 }
+
 
 
 
